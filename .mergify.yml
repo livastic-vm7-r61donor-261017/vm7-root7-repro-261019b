@@ -1,0 +1,9 @@
+pull_request_rules:
+  - name: h1-root7-repro-261019b non-default gate
+    conditions:
+      - base = stable
+      - head != stable
+      - check-success = h1-root7-repro-261019b-prevention
+    actions:
+      merge:
+        method: squash
